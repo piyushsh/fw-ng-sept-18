@@ -1,0 +1,13 @@
+.shop{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    font-family: verdana;
+}
+
+.shop .limit{
+    opacity: 0.5;
+    cursor: default;
+}

@@ -1,0 +1,4 @@
+[
+	{ "image":"valencia.jpg", "city":"Valencia", "region":"Valencia", "popl":1.5, "temp":70 },
+	{ "image":"alicante.jpg", "city":"Alicante–Elche", "region":"Valencia", "popl":0.7, "temp":68 }
+]

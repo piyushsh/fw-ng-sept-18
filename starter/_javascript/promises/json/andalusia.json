@@ -1,0 +1,4 @@
+[
+	{ "image":"sevilla.jpg", "name":"Sevilla", "region":"Andalusia", "popl":1.2, "temp":84 },
+	{ "image":"granada.jpg", "name":"Granada", "region":"Andalusia", "popl":0.5, "temp":102 }
+]

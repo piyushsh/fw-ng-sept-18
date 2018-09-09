@@ -1,0 +1,10 @@
+<form [formGroup]="fg" class="panel">
+
+    <section>
+        <input type="radio" value="Gatwick" formControlName="airport" [checked]="true"><label>Gatwick</label>
+        <input type="radio" value="Heathrow" formControlName="airport"><label>Heathrow</label>
+    </section>
+
+    <input type="checkbox" formControlName="parking"><label>Parking</label>
+
+</form>

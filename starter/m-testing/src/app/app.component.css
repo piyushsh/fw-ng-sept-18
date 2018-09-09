@@ -1,0 +1,9 @@
+*{
+	font-family: helvetica;
+	color:darkslategrey;
+	text-align: center;
+	font-size: 1.5rem;
+	padding:1rem;
+	border-bottom: 1px solid lightgrey;
+	margin:0;
+}

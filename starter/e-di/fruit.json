@@ -1,0 +1,7 @@
+[
+    {"type":"Pears","price":1.85,"instock":true,"discount":0.4},
+    {"type":"Potatoes","price":0.75,"instock":true,"discount":0},
+    {"type":"Apples","price":1.45,"instock":true,"discount":0.2},
+    {"type":"Kale","price":0.65,"instock":true,"discount":0.1},
+    {"type":"Carrots","price":1.85,"instock":false,"discount":0}
+]

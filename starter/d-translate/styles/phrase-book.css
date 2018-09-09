@@ -1,0 +1,66 @@
+
+.phrase-book{
+
+	font-family: 'oswald', sans-serif;
+	font-size: 1rem;
+
+}
+
+h1{
+	text-align: center;
+	margin:1rem;
+}
+
+
+.flex {
+
+	display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+	padding:1rem;
+	line-height: 1.4;
+}
+
+.panel{
+	font-size: 1.25rem;
+	max-width: 10rem;
+	min-width: 10rem;
+	margin: 0.25rem;
+	background-color: white;
+	border:1px solid #444444;
+	cursor:pointer;
+}
+
+.panel:nth-of-type(odd) {
+	transform: rotate(1deg);
+}
+
+.panel:nth-of-type(even) {
+	transform: rotate(-1deg);
+}
+
+.panel-es, .panel-en{
+
+	color: white;
+	font-size: 1.25rem;
+	padding: 1rem 0.5rem;
+	letter-spacing: 1px;
+	margin:0;
+	text-align: center;
+	user-select: none;
+}
+
+.panel-es{
+	background-color: orangered;
+}
+
+.panel-en{
+	background-color: orange;
+    color:orange; /* Hide English */
+}
+
+.reveal{
+    color:black;
+}
