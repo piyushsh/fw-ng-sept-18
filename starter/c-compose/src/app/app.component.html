@@ -1,0 +1,22 @@
+
+<article>
+    <p>{{ getShop(shop) }}</p>
+
+    <section class="shop">
+        <app-item
+            *ngFor="let f of fruitVeg" [item]="f" (select)="select(f)" >
+        </app-item>
+    </section>
+
+    <section class="shop">
+        <section
+            *ngFor="let f of basket"
+            class="panel basket">
+
+            <p>{{ f.name }}</p>
+            <p>{{ f.price | currency : "GBP" }}</p>
+        </section>
+    </section>
+
+    <p>{{ getTotal() | currency : "GBP" }}</p>
+</article>

@@ -1,0 +1,32 @@
+
+article{
+    font-family: tahoma;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.shop{
+    display: flex; /* turns on Flexbox layout */
+    justify-content: center; /* centers it */
+    flex-direction: row; /* flows it left to right */
+    flex-wrap: wrap; /* reflow itself at diff widths */
+}
+
+.panel{
+    border:1px solid grey;
+    padding:1rem;
+    margin:0.2rem;
+    text-align: center;
+    width:8rem;
+    cursor: pointer;
+}
+
+.basket{
+    cursor: default;
+    color:orangered;
+}
+
+.outstock{
+  opacity: 0.2;
+  cursor:default;
+}
