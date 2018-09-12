@@ -12,7 +12,7 @@ app.use( function(req, res, next) {
 
 const getFruit = (req,res) => {
 
-    fs.readFile( "fruit.json" ,"utf8", ( error, fruit ) => {
+    fs.readFile( "src/assets/shop.json" ,"utf8", ( error, fruit ) => {
 	       res.json( JSON.parse( fruit ));
     });
 }

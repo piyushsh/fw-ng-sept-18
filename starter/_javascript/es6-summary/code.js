@@ -19,3 +19,6 @@ let spain = [
 	{ image:"zaragoza.jpg", name:"Zaragoza", region:"Aragon", popl:0.7, temp:64 },
 	{ image:"vigo.jpg", name:"Vigo", region:"Galician", popl:0.2, temp:60 }
 ];
+
+
+let _hypen = str => str.replace("-");

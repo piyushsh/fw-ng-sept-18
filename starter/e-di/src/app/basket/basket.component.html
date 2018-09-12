@@ -1,0 +1,6 @@
+<section 
+      *ngFor="let f of basket" 
+      class="panel panel-bought">
+      <p>{{f.name }}</p>
+      <p><span>Cost: </span><span>{{ f.price | currency : "EUR"}}</span></p>
+</section>

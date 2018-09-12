@@ -1,0 +1,6 @@
+[
+    {"name": "Carrots", "price": 10, "code":1001, "quantity":0}, 
+    {"name": "Apples", "price": 20, "code":1002, "quantity":10},
+    {"name": "Orange", "price": 30, "code":2001, "quantity":21},
+    {"name": "Broccoli", "price": 40, "code":2203, "quantity":0}
+]

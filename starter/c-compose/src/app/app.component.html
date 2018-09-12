@@ -1,0 +1,40 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<article>
+  <section>
+    <h1>Shop Description</h1>
+    <p>{{getShop(shop)}}</p>
+  </section>
+  <h1>To Buy : {{getTotal() | currency : "EUR"}}</h1>
+  
+  <section class="shop">
+    
+    <app-item 
+      *ngFor="let f of fruitVeg; trackBy:trackIndex"
+      [item]="f"
+      class="panel"
+      (select)="select(f)">
+    </app-item>
+    <!-- <section 
+      *ngFor="let f of fruitVeg; trackBy:trackIndex" 
+      class="panel"
+      (click)="select(f)"
+      [ngClass]="{ 'outOfStock' : !f.quantity }">
+      
+      <p>{{f.name }}</p>
+      <p><span>Cost: </span><span>{{ f.price | currency : "EUR"}}</span></p>
+      <p class="quantity"><span>Quantity Left:{{f.quantity}}</span></p>
+    </section> -->
+
+    <app-basket></app-basket>
+
+    <section 
+      *ngFor="let f of basket" 
+      class="panel panel-bought"
+      (click)="removeItem(f)">
+      <p>{{f.name }}</p>
+      <p><span>Cost: </span><span>{{ f.price | currency : "EUR"}}</span></p>
+    </section>
+
+  </section>
+
+</article>

@@ -1,0 +1,8 @@
+<div (click)="toggleTranslation()">
+  <div class="panel-es">
+    {{phrase.text}}
+  </div>
+  <div class="panel-en" [ngClass]=" { 'reveal' :  toggle } ">
+    <span *ngIf="toggle">{{phrase.translation}}</span>
+  </div>
+</div>

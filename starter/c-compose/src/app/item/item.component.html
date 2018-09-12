@@ -1,0 +1,7 @@
+<section 
+  (click)="item.quantity && select.emit()"
+  [ngClass]="{ 'outOfStock' : !item.quantity }">
+    <p>{{item.name }}</p>
+    <p><span>Cost: </span><span>{{ item.price | currency : "EUR"}}</span></p>
+    <p class="quantity"><span>Quantity Left:{{item.quantity}}</span></p>
+</section>
