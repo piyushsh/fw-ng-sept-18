@@ -1,0 +1,21 @@
+.shop{
+    font-family: verdana;
+}
+
+.debug{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.debug p{
+    font-size: 1rem;
+    text-align: center;
+    background-color: orangered;
+    color:white;
+    padding:1rem;
+    margin:0.2rem;
+    cursor: pointer;
+    user-select: none;
+}

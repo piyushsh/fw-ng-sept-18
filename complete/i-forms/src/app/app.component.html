@@ -1,0 +1,32 @@
+
+<form
+    class="films"
+    [formGroup]="film"
+    (ngSubmit)="addFilm(film)">
+
+  <section>
+      <label>Film</label>
+      <input type="text" [formControl]="tc">
+      <span *ngIf="!tc.valid && tc.touched">{{ getError(tc) }}</span>
+  </section>
+
+  <section>
+      <label>Director</label>
+      <input type="text" [formControl]="dc">
+      <span *ngIf="!dc.valid && dc.touched">{{ getError(dc) }}</span>
+  </section>
+
+  <button
+  [disabled]="!film.valid"
+  [ngClass]="{'submit' : film.valid }"
+  type="submit">
+  Add film</button>
+
+    <pre>Title
+    dirty-state <span>{{ film.controls.title.dirty }}</span>
+    pristine-state <span>{{ film.controls.title.pristine }}</span>
+    touched <span>{{ film.controls.title.touched }}</span>
+    valid <span>{{ film.controls.title.valid }}</span>
+    </pre>
+
+</form>

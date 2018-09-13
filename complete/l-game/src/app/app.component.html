@@ -1,0 +1,14 @@
+
+<section class="game">
+
+    <section class="flex">
+        <app-letter
+            *ngFor="let char of word"
+            [letter]="char"
+            (choose)="drawWord(char)"
+        >
+        </app-letter>
+    </section>
+
+    <p class="answer" [ngClass]="{ 'go' : gameOver }">{{ answer }}</p>
+</section>

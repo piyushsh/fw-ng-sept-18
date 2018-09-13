@@ -1,0 +1,15 @@
+
+<section class="shop">
+
+    <section class="debug">
+        <p (click)="remove()">Remove</p>
+        <p (click)="create()">Create</p>
+        <p (click)="buyStock()">Buy stock</p>
+        <p (click)="increasePrice()">Increase Price</p>
+    </section>
+
+    <hr/>
+
+    <tincan [product]="product" [price]="price" *ngIf="state"></tincan>
+
+</section>

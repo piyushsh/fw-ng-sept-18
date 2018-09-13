@@ -1,0 +1,8 @@
+<nav>
+  <a [routerLink]="['/tv','4']" [routerLinkActive]="['active']">Channel 4</a>
+  <a [routerLink]="['/tv','17']" [routerLinkActive]="['active']">Channel 17</a>
+</nav>
+
+<h1>TV</h1>
+
+<img *ngIf="channel" src="{{'assets/channel' +channel+ '.jpg'}}" />

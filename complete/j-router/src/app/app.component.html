@@ -1,0 +1,17 @@
+<section class="route">
+
+    <nav>
+      <a [routerLink]="['/tv']" [routerLinkActive]="['active']">TV</a>
+      <a [routerLink]="['/radio']" [routerLinkActive]="['active']">RADIO</a>
+    </nav>
+
+    <section class="page">
+        <router-outlet></router-outlet>
+    </section>
+
+    <p><span (click)="goRadio(4)">Radio 4</span> covers the arts and entertainment.</p>
+    <p><span (click)="goRadio(11)">Radio 11</span> is all about climate change and the environment.</p>
+    <p><span (click)="goChannel(4)">Channel 4</span> broadcasts financial news.</p>
+    <p><span (click)="goChannel(17)">Channel 17</span> is all about sport.</p>
+
+</section>

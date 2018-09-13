@@ -1,0 +1,10 @@
+
+<section
+    (click)="fruit.instock && select.emit()"
+    class="fruit"
+    [ngClass]="{ 'outstock' : !fruit.instock }">
+
+    <p>{{ fruit.type }}</p>
+    <p>{{ fruit.price - fruit.discount | currency:"GBP":"£" }}</p>
+
+</section>

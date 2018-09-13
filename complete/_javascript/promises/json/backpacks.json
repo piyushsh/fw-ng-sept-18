@@ -1,0 +1,30 @@
+[
+	{
+		"name" : "Burton Blue",
+		"image" : "assets/burton-blue.png",
+		"description" : "Multi purpose robust daypack",
+		"price" : 45.25,
+		"code" : "hike-4567-7645-a"
+	},
+	{
+		"name" : "Gregory Red",
+		"image" : "assets/gregory-red.png",
+		"description" : "Economical pack with features",
+		"price" : 75.44,
+		"code" : "hike-5566-7766-a"
+	},
+	{
+		"name" : "Kathmandu Black",
+		"image" : "assets/kathmandu-black.png",
+		"description" : "High spec expedition pack",
+		"price" : 145.25,
+		"code" : "hike-0101-7645-a"
+	},
+	{
+		"name" : "Kelty Orange",
+		"image" : "assets/kelty-orange.png",
+		"description" : "Designed for the day hiker",
+		"price" : 55.00,
+		"code" : "hike-8877-7766-a"
+	}
+]

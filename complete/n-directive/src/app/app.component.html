@@ -1,0 +1,7 @@
+
+<section class="shop">
+    <tincan
+        limit maximum={{p.maximum}} (more)="buyProduct($event)"
+        *ngFor="let p of products" [product]="p">
+    </tincan>
+</section>

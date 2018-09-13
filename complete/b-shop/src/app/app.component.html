@@ -1,0 +1,30 @@
+<section class="shop">
+    <h1>{{ shop }}</h1>
+    <h2>{{ getAddr() }}</h2>
+
+    <section class="produce">
+
+        <section
+            class="fruit"
+            [ngClass]="{ 'outstock' : !f.instock }"
+            *ngFor="let f of fruit"
+            (click)="f.instock && buyFruit(f)">
+
+            <p>{{ f.type }}</p>
+
+            <p [ngClass]="{ 'discount' : f.discount }">
+            {{ f.price - f.discount | currency:"GBP":"£" }}</p>
+
+        </section>
+    </section>
+
+    <section class="produce">
+        <section class="fruit" *ngFor="let f of basket">
+            <p>{{ f.type }}</p>
+            <p>{{ f.price  }}</p>
+        </section>
+    </section>
+
+    <p *ngIf="total">{{ total | currency:"GBP":"£" }}</p>
+
+</section>

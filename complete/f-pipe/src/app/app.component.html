@@ -1,0 +1,15 @@
+
+<section class="pipeDemo">
+
+    <p>The price was {{ conference.price | currency:"GBP":"£" }}</p>
+
+    <p>{{ conference | json }}</p>
+
+    <p>{{ today | date:"fullDate" }}</p>
+
+    <p>{{ today | date:"fullDate" | lowercase }}</p>
+
+    <p>{{ conference.byline | titleCase }}
+
+    <p>{{ "Mortgage Base Rate Rises" | hyphen:"http://news.com/" }}</p>
+</section>

@@ -1,0 +1,18 @@
+
+<section class="nytrip">
+
+    <section class="flex-panels">
+        <app-airport></app-airport>
+        <app-dest></app-dest>
+    </section>
+
+    <hr/>
+
+    <section class="summary">
+
+        <p>We travelled from <span>{{ trip.airport }}</span>, <span>{{ trip.parking ? "with" : "without" }}</span> airport parking.</p>
+        <p>We stayed in a <span>{{ trip.hotel }}</span> star hotel, <span>{{ trip.hirecar ? "with" : "without" }}</span> a hire car.</p>
+
+    </section>
+
+</section>

@@ -1,0 +1,16 @@
+<h2>{{ name }}</h2>
+
+<section class="product">
+
+    <img src="{{'assets/beans/' + product.image}}">
+
+    <p>{{product.name}}</p>
+    <p class="info">{{product.info}}</p>
+    <p>{{product.stock}}</p>
+    <p>{{price | currency : "GBP" : "£" }}</p>
+
+</section>
+
+<p class="observe">{{ displaySeq }}</p>
+
+<!-- <p class="pipe">{{ 256 | timer : 50 }}</p> -->

@@ -1,0 +1,26 @@
+<section class="shop">
+
+    <h1>{{ shop }}</h1>
+    <h2>{{ getAddr() }}</h2>
+
+    <section class="flex">
+        <app-fruit
+            *ngFor="let f of fruit"
+            [fruit]="f"
+            (select)="buyFruit(f)">
+        </app-fruit>
+    </section>
+
+    <section class="flex">
+        <app-fruit
+            *ngFor="let f of basket"
+            [fruit]="f"
+            (select)="removeItem(f)">
+        </app-fruit>
+    </section>
+
+    <h2>{{ getTotal() | currency:"GBP":"£" }}</h2>
+
+    <p *ngIf="basket.length" class="empty" (click)="empty()">Empty</p>
+
+</section>

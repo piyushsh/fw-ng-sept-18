@@ -1,0 +1,15 @@
+<section class="vote">
+
+    <img (click)="empty()" src="assets/card.jpg" />
+
+    <form [formGroup]="fg">
+        <select [formControl]="fg.controls.village">
+            <option *ngFor="let v of villages">{{ v }}</option>
+        </select>
+    </form>
+
+    <section class="votes">
+        <span class="village" *ngFor="let v of votes">{{ v }}</span>
+    </section>
+    
+</section>

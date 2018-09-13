@@ -1,0 +1,64 @@
+body{
+	font-family: helvetica;
+	min-height: 24rem;
+}
+
+.demo{
+	margin:1rem auto;
+	border:1px solid grey;
+	padding:1rem;
+	height:400px;
+}
+
+input{
+	font-size: 1rem;
+	padding: 0.25rem;
+	margin:1rem auto;
+	display:block;
+}
+
+.word{
+	padding:0.5rem;
+	background-color: beige;
+	border:1px solid darkslategrey;
+	text-align: center;
+	margin:0.2rem;
+	display:inline-block;
+	user-select: none;
+}
+
+.adenine{
+	background-color: blue;
+	color:white;
+}
+
+.adenine:before{
+	content:"A";
+}
+
+.guanine{
+	background-color: sienna;
+	color:white;
+}
+
+.guanine:before{
+	content:"G";
+}
+
+.cytosine{
+	background-color: orangered;
+	color:white;
+}
+
+.cytosine:before{
+	content:"C";
+}
+
+.thymine{
+	background-color: forestgreen;
+	color:white;
+}
+
+.thymine:before{
+	content:"T";
+}

@@ -1,0 +1,42 @@
+
+.flex{
+  margin:0;
+  padding:0;
+  color:darkslategrey;
+  font-family: menlo;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.person{
+  border:1px solid lightgrey;
+  width:12rem;
+  text-align: center;
+  margin:0.25rem;
+  padding:1rem;
+  border-radius: 8px;
+}
+
+img{
+  border-radius: 50%;
+  width:4rem;
+  display: block;
+  margin:0 auto;
+  padding:0.5rem;
+}
+
+p{
+  font-size: 1rem;
+}
+
+.name{
+  color:orangered;
+  font-size: 1.1rem;
+}
+
+.email{
+  color:orangered;
+  font-size: 0.7rem;
+}

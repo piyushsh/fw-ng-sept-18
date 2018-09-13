@@ -1,0 +1,11 @@
+
+<article class="flex">
+
+  <section *ngFor="let p of users" class="person">
+      <p>{{p.first}} {{p.last}}</p>
+      <img src="{{p.medium}}" alt="photo"/>
+      <p>{{p.city}}</p>
+      <p class="email">{{p.email}}</p>
+  </section>
+
+</article>

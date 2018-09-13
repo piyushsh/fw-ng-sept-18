@@ -1,0 +1,29 @@
+.game{
+    font-family: menlo;
+    color:orangered;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.flex{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.letter{
+    border:1px solid lightgrey;
+    padding:1rem;
+    margin:0.2rem;
+    transition:1s all;
+}
+
+.drop{
+    position:relative;
+    top:20rem;
+}
+
+.go{
+    color:forestgreen;
+}
