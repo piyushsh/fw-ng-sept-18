@@ -8,8 +8,13 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-    constructor() {}
+  constructor(private router: Router) { }
 
-    goRadio() {}
-    goChannel() {}    
+  goRadio(n) {
+    this.router.navigate(["radio", n]);
+  }
+
+  goChannel(channel) {
+    this.router.navigate(['tv', channel]);
+  }
 }

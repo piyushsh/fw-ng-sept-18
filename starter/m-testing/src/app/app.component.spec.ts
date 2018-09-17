@@ -2,6 +2,9 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { DoublePipe } from './double.pipe';
 import { testData } from './testdata';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { CapitalPipe } from './pipes/capital.pipe';
+import { DataService, FakeService } from './services/data.service';
 
 describe('AppComponent', () => {
 
@@ -13,8 +16,14 @@ describe('AppComponent', () => {
 		TestBed.configureTestingModule({
 			declarations: [
 				AppComponent,
-				DoublePipe
+				DoublePipe,
+				ReversePipe,
+				CapitalPipe
 			],
+			providers: [{
+				provide: DataService,
+				useClass: FakeService
+			}]
 		}).compileComponents();
 
 		cpClass = TestBed.createComponent(AppComponent);
@@ -22,8 +31,16 @@ describe('AppComponent', () => {
 
 	}));
 
-	it('should..', async(() => {
-		// expect..
+	it('should create the app', async(() => {
+		const fixture = TestBed.createComponent(AppComponent);
+		//Refresh component DOM 
+		fixture.detectChanges();
+		const app = fixture.debugElement.componentInstance;
+		console.log(app);
+		console.log(fixture.debugElement.nativeElement);
+		//Assert
+		expect(app).toBeTruthy();
+		expect(app.ads.getName()).toEqual("Fake Service Name")
 	}));
 
 });

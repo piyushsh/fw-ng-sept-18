@@ -7,7 +7,11 @@ function simple() {
 	// Transform the series with .map( v => v * 2)
 
 	let ob = Rx.Observable
-		.interval(1000)
+		.interval(2000)
+		.map((x) => {
+			console.log(x); 
+			return x*2;
+		})
 		.subscribe(v => draw(v));
 
 }

@@ -1,17 +1,17 @@
-<form class="films">
+<form class="films" [formGroup]="film" (submit)="addFilm()">
 
-  <section>
-      <label>Film</label>
-      <input type="text">
-      <span>Required</span>
-  </section>
+    <section>
+        <label>Title</label>
+        <input type="text" [formControl]="ft">
+        <p class="validation-msg" *ngIf="isFieldInValid(ft)">{{ft.errors.shortName}}</p>
+    </section>
 
-  <section>
-      <label>Director</label>
-      <input type="text">
-      <span>Required</span>
-  </section>
+    <section>
+        <label>Director</label>
+        <input type="text" [formControl]="fd">
+        <p class="validation-msg" *ngIf="isFieldInValid(fd)">{{fd.errors.shortName}}</p>
+    </section>
 
-  <button type="submit">Add film</button>
+    <button [disabled]="film.invalid" [ngClass]="{'submit' : film.valid}" type="submit">Add film</button>
 
 </form>

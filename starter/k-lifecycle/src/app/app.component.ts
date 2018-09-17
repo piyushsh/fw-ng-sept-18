@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 
     state = true;
 
-    product : any ;
-    price : number;
+    product: any;
+    price: number;
 
     constructor() {
         this.reset();
@@ -19,24 +19,33 @@ export class AppComponent {
     reset() {
 
         this.product = {
-            name:"Heinz",
-            image:"heinz.jpg",
-            info:"No added sugar 400g",
-            stock:5 };
+            name: "Heinz",
+            image: "heinz.jpg",
+            info: "No added sugar 400g",
+            stock: 5
+        };
 
         this.price = 0.45;
 
     }
 
     // ===============================================
-    
-    remove() {}
 
-    create() {}
+    remove = () => {
+        this.state = false;
+    }
 
-    buyStock() {}
+    create = () => {
+        this.state = true;
+    }
 
-    increasePrice() {}
+    buyStock = () => {
+        this.product = { ...this.product, stock: Math.max(this.product.stock - 1, 0) };
+    }
+
+    increasePrice = () => {
+        this.price += 0.10;
+    }
 
     // ===============================================
 }

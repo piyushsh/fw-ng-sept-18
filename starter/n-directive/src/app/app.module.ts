@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TincanComponent } from './tincan/tincan.component';
+import { MaxBuyDirective } from './directives/max-buy.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TincanComponent
+    TincanComponent,
+    MaxBuyDirective
   ],
   imports: [
     BrowserModule

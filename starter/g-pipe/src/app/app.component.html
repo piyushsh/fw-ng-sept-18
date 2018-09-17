@@ -1,0 +1,7 @@
+<p class="pipedemo">Hello!</p>
+
+<section> {{ course | json }}</section>
+
+<p *ngFor="let prop of course | keyvalue">{{prop.key | bookend}} --> {{prop.value}}</p>
+
+<p>{{"Hello this is test" | slug}}</p>

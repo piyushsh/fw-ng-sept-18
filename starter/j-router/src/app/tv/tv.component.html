@@ -1,6 +1,6 @@
 <nav>
-  <a>Channel 4</a>
-  <a>Channel 17</a>
+  <a routerLink="/tv/4" routerLinkActive="active">Channel 4</a>
+  <a [routerLink]="['/tv','17']" [routerLinkActive]="['active']">Channel 17</a>
 </nav>
 
 <h1>TV</h1>

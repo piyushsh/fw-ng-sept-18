@@ -10,8 +10,12 @@ export class TvComponent implements OnInit {
 
   channel: string;
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {
 
-  ngOnInit() { }
+  }
+
+  ngOnInit() {
+    this.route.params.subscribe(x => this.channel = x.channel);
+  }
 
 }

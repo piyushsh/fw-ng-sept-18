@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule,Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TvComponent } from './tv/tv.component';
 import { RadioComponent } from './radio/radio.component';
@@ -14,13 +14,14 @@ import { PayRadio } from './guard/PayRadio';
 
 @NgModule({
   declarations: [
-    AppComponent,TvComponent,RadioComponent, Radio4Component, Radio11Component
+    AppComponent, TvComponent, RadioComponent, Radio4Component, Radio11Component
   ],
   imports: [
-      BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(AppRoutes, { enableTracing: true, useHash: false })
   ],
   providers: [PayRadio],
   bootstrap: [AppComponent]
 })
 
-export class AppModule {}
+export class AppModule { }

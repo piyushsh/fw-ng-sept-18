@@ -67,3 +67,11 @@ hr{
 .error-border{
 	border:red solid 1px;
 }
+
+.validation-msg
+{
+	color:red;
+	font-size: 15px;
+	margin-top:5px;
+	margin-bottom: 10px;
+}

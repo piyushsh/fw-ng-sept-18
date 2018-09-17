@@ -1,4 +1,3 @@
-
 <section class="shop">
-    <tincan *ngFor="let p of products" [product]="p"></tincan>
+    <tincan *ngFor="let p of products" [product]="p" [maxBuy]="p.maximum" (select)="buyProduct(p)"></tincan>
 </section>

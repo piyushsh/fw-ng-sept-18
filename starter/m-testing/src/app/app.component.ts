@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService, FakeService } from './services/data.service';
 
 @Component({
 	selector: 'app-root',
@@ -7,13 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-    property = {
-        street: "150 Minories, the City of London",
-        value: 25
-    }
+	private film: string = "Taxi Driver";
+	private actor: string = "Robert DeNiro";
 
-	hypenate(s) {
-		return s.trim().split(" ").join("-").toLowerCase()
+	constructor(public ads: DataService) {
+		this.actor = this.ads.getName();
 	}
-
 }

@@ -1,40 +1,52 @@
 import {
     Component,
     Input,
-    SimpleChanges
+    SimpleChanges,
+    OnInit,
+    OnDestroy,
+    OnChanges,
+    DoCheck
 } from '@angular/core';
 
 import { Observable, interval } from 'rxjs';
 
-import { ShopService } from "../service/shop.service" ;
+import { ShopService } from "../service/shop.service";
 
 @Component({
-  selector: 'tincan',
-  templateUrl: './tincan.component.html',
-  styleUrls: ['./tincan.component.css']
+    selector: 'tincan',
+    templateUrl: './tincan.component.html',
+    styleUrls: ['./tincan.component.css']
 })
-export class TincanComponent {
+export class TincanComponent implements OnInit, OnDestroy, OnChanges, DoCheck {
 
     sequence;
     subscription;
-    displaySeq : number;
-    id : number;
-    name : string;
+    displaySeq: number;
+    id: number;
+    name: string;
 
     @Input() product;
     @Input() price;
 
-    constructor() {}
+    constructor(private shop: ShopService) {
+
+    }
 
     // ===============================================
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.createSequence();
+    }
 
-    ngOnDestroy() {}
+    ngOnDestroy() {
+        this.subscription.unsubscribe();
+    }
 
-    ngOnChanges() {}
+    ngOnChanges(changes: SimpleChanges) {
+        console.log(JSON.stringify(changes));
+    }
 
-    ngDoCheck() {}
+    ngDoCheck() { }
 
     // ===============================================
 
@@ -45,7 +57,7 @@ export class TincanComponent {
         this.id = Date.now();
         this.sequence = interval(1000);
 
-        this.subscription = this.sequence.subscribe( n => {
+        this.subscription = this.sequence.subscribe(n => {
             this.displaySeq = n;
         });
     }
